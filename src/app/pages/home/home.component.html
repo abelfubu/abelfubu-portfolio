@@ -1,4 +1,6 @@
-<ng-container *ngIf="scroll$ | async"></ng-container>
+<ng-container *ngIf="touchstart$ | async"></ng-container>
+<ng-container *ngIf="touchend$ | async"></ng-container>
+<ng-container *ngIf="wheel$ | async"></ng-container>
 <!-- SECTION ONE -->
 <section #section>
   <div>

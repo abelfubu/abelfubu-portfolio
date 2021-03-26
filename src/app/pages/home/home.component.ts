@@ -5,36 +5,48 @@ import {
   Component,
   ElementRef,
   Inject,
+  OnDestroy,
   QueryList,
   Renderer2,
   ViewChildren,
 } from '@angular/core'
-import { fromEvent } from 'rxjs'
-import { tap, throttleTime } from 'rxjs/operators'
+import { fromEvent, Observable, Subject } from 'rxjs'
+import { takeUntil, tap, throttleTime } from 'rxjs/operators'
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-export class HomeComponent implements AfterViewInit {
+export class HomeComponent implements AfterViewInit, OnDestroy {
   window = this.document.defaultView
   currentPage = 0
+  touchStart = 0
   @ViewChildren('section')
   sections!: QueryList<ElementRef<HTMLElement>>
-  scroll$ = fromEvent(window, 'wheel').pipe(
+
+  unsubscribe$ = new Subject()
+
+  wheel$ = fromEvent(window, 'wheel').pipe(
     throttleTime(500),
     tap(event => this.handleScrollEvent(event)),
+    takeUntil(this.unsubscribe$),
   )
-  wheel$ = fromEvent(window, 'touch').pipe(
+  touchstart$ = fromEvent<TouchEvent>(this.el.nativeElement, 'touchstart').pipe(
     throttleTime(500),
-    tap(event => this.handleScrollEvent(event)),
-    tap(console.log),
+    tap((event: TouchEvent) => (this.touchStart = event.changedTouches[0].clientY)),
+    takeUntil(this.unsubscribe$),
+  )
+  touchend$ = fromEvent<TouchEvent>(this.el.nativeElement, 'touchend').pipe(
+    throttleTime(500),
+    tap((event: TouchEvent) => this.handleTouchEnd(event)),
+    takeUntil(this.unsubscribe$),
   )
 
   constructor(
     @Inject(DOCUMENT) private document: HTMLDocument,
     private renderer: Renderer2,
+    private el: ElementRef,
     private cdr: ChangeDetectorRef,
   ) {}
 
@@ -76,6 +88,15 @@ export class HomeComponent implements AfterViewInit {
     this.setClass('fadein-top', this.currentPage)
   }
 
+  handleTouchEnd(event: TouchEvent): void {
+    const isNextPage = event.changedTouches[0].clientY > this.touchStart
+    if (!isNextPage && this.currentPage !== this.sections.length - 1) {
+      this.scrollNextPage()
+    } else if (isNextPage && this.currentPage !== 0) {
+      this.scrollPreviousPage()
+    }
+  }
+
   handleBulletClick(index: number): void {
     if (index < this.currentPage) {
       this.setClass('fadeout-bottom', this.currentPage)
@@ -86,5 +107,9 @@ export class HomeComponent implements AfterViewInit {
       this.currentPage = index
       this.setClass('fadein-bottom', this.currentPage)
     }
+  }
+
+  ngOnDestroy(): void {
+    this.unsubscribe$.next()
   }
 }
