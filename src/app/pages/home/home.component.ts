@@ -22,9 +22,14 @@ export class HomeComponent implements AfterViewInit {
   currentPage = 0
   @ViewChildren('section')
   sections!: QueryList<ElementRef<HTMLElement>>
-  scroll$ = fromEvent(window, 'wheel').pipe(
+  wheel$ = fromEvent(window, 'wheel').pipe(
     throttleTime(500),
     tap(event => this.handleScrollEvent(event)),
+  )
+  scroll$ = fromEvent(window, 'touch').pipe(
+    throttleTime(500),
+    tap(event => this.handleScrollEvent(event)),
+    tap(console.log),
   )
 
   constructor(

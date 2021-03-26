@@ -6,6 +6,7 @@ import { HomeIconComponent } from './home-icon/home-icon.component'
 import { LightModeIconComponent } from './light-mode-icon/light-mode-icon.component'
 import { DarkModeIconComponent } from './dark-mode-icon/dark-mode-icon.component'
 import { ContactIconComponent } from './contact-icon/contact-icon.component'
+import { LinkedinIconComponent } from './linkedin-icon/linkedin-icon.component'
 
 @NgModule({
   imports: [CommonModule],
@@ -15,6 +16,7 @@ import { ContactIconComponent } from './contact-icon/contact-icon.component'
     OptionsIconComponent,
     ContactIconComponent,
     DarkModeIconComponent,
+    LinkedinIconComponent,
     LightModeIconComponent,
   ],
   exports: [
@@ -22,6 +24,7 @@ import { ContactIconComponent } from './contact-icon/contact-icon.component'
     GithubIconComponent,
     ContactIconComponent,
     OptionsIconComponent,
+    LinkedinIconComponent,
     DarkModeIconComponent,
     LightModeIconComponent,
   ],

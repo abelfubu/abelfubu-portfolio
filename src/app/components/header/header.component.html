@@ -1,7 +1,15 @@
 <img src="assets/svg/logo.svg" alt="Logo Abelfubu" />
-<a [class.rotate-in]="isDarkMode" [class.rotate-out]="!isDarkMode"
-  ><app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon
-></a>
-<a [class.rotate-in]="!isDarkMode" [class.rotate-out]="isDarkMode"
-  ><app-dark-mode-icon (click)="onDarkToggled.emit()"></app-dark-mode-icon
-></a>
+<div class="social">
+  <a href="https://github.com/abelfubu" target="_blank"><app-github></app-github></a>
+  <a href="https://www.linkedin.com/in/abelfubu/" target="_blank">
+    <app-linkedin-icon></app-linkedin-icon>
+  </a>
+  <div class="dark">
+    <a [class.rotate-in]="isDarkMode" [class.rotate-out]="!isDarkMode">
+      <app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon>
+    </a>
+    <a [class.rotate-in]="!isDarkMode" [class.rotate-out]="isDarkMode">
+      <app-dark-mode-icon (click)="onDarkToggled.emit()"></app-dark-mode-icon>
+    </a>
+  </div>
+</div>

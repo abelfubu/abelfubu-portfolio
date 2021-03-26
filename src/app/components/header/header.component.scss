@@ -17,8 +17,6 @@
   }
 
   a {
-    position: absolute;
-    right: 8%;
     height: 28px;
     cursor: pointer;
     color: map-get($orange, 400);
@@ -26,8 +24,24 @@
     svg {
       height: 28px;
     }
+  }
 
-    &:hover {
+  .dark {
+    height: 28px;
+
+    a {
+      position: absolute;
+      top: 26px;
+      right: 8%;
+    }
+  }
+
+  .social {
+    padding-right: 44px;
+    display: flex;
+
+    a {
+      margin-left: 16px;
     }
   }
 }
@@ -40,7 +54,6 @@
 .rotate-out {
   -webkit-animation: rotate-out-center 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
   animation: rotate-out-center 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
-  // z-index: -1;
 }
 
 @-webkit-keyframes rotate-out-center {
