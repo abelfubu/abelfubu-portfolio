@@ -1,0 +1,55 @@
+@import url(https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,300;0,600;1,100;1,300;1,600&display=swap);
+
+/* You can add global styles to this file, and also import other style files */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-size: 16px;
+  font-family: "Fira Sans", sans-serif;
+  line-height: 1.6em;
+  overflow-x: hidden;
+  transition: background-color 200ms cubic-bezier(0.25, 0.46, 0.45, 0.94), color 400ms ease-in-out;
+}
+body.dark-mode {
+  background-color: #282c34;
+  color: #bee4e1;
+}
+body.dark-mode .bullet {
+  border: 3px solid #282c34;
+}
+body.light-mode {
+  background-color: #f2faf9;
+  color: #0f1015;
+}
+body.light-mode .bullet {
+  border: 3px solid #fff;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+svg {
+  font-size: 14px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  transition: color 150ms ease-in-out;
+  cursor: pointer;
+}
+a:hover {
+  color: #ff9e02;
+}
+a.active {
+  color: #ffb305;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3N0eWxlcy5zY3NzIiwiLi4vdGhlbWUvX2Jhc2Uuc2NzcyIsIi4uL3RoZW1lL19kYXJrLW1vZGUuc2NzcyIsIi4uL3RoZW1lL19saWdodC1tb2RlLnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUVRLDRIQUFBO0FBRlIsOEVBQUE7QUNJQTtFQUNFLG1DQUFBO0VBQ0Esa0NBQUE7RUFDQSxzQkFBQTtFQUNBLFNBQUE7RUFDQSxVQUFBO0FEREY7QUNJQTtFQUNFLGVBQUE7RUFDQSxvQ0FBQTtFQUNBLGtCQUFBO0VBQ0Esa0JBQUE7RUFFQSxnR0FBQTtBREZGO0FDSUU7RUNqQkEseUJBQUE7RUFDQSxjQUFBO0FGZ0JGO0FFZEU7RUFDRSx5QkFBQTtBRmdCSjtBQ0NFO0VFckJBLHlCQUFBO0VBQ0EsY0FBQTtBSHVCRjtBR3JCRTtFQUNFLHNCQUFBO0FIdUJKO0FDREE7Ozs7RUFJRSxnQkFBQTtBRElGO0FDREE7RUFDRSxlQUFBO0FESUY7QUNEQTtFQUNFLHFCQUFBO0VBQ0EsV0FBQTtFQUNBLG1DQUFBO0VBQ0EsZUFBQTtBRElGO0FDRkU7RUFDRSxjQUFBO0FESUo7QUNERTtFQUNFLGNBQUE7QURHSiIsImZpbGUiOiJzdHlsZXMuc2NzcyIsInNvdXJjZXNDb250ZW50IjpbIi8qIFlvdSBjYW4gYWRkIGdsb2JhbCBzdHlsZXMgdG8gdGhpcyBmaWxlLCBhbmQgYWxzbyBpbXBvcnQgb3RoZXIgc3R5bGUgZmlsZXMgKi9cbkB1c2UgJ3RoZW1lL2luZGV4LnNjc3MnIGFzICo7XG5AaW1wb3J0IHVybCgnaHR0cHM6Ly9mb250cy5nb29nbGVhcGlzLmNvbS9jc3MyP2ZhbWlseT1GaXJhK1NhbnM6aXRhbCx3Z2h0QDAsMTAwOzAsMzAwOzAsNjAwOzEsMTAwOzEsMzAwOzEsNjAwJmRpc3BsYXk9c3dhcCcpO1xuXG4iLCJAdXNlICdjb2xvcnMnIGFzICo7XG5AdXNlICdkYXJrLW1vZGUnIGFzICo7XG5AdXNlICdsaWdodC1tb2RlJyBhcyAqO1xuXG4qIHtcbiAgLXdlYmtpdC1mb250LXNtb290aGluZzogYW50aWFsaWFzZWQ7XG4gIC1tb3otb3N4LWZvbnQtc21vb3RoaW5nOiBncmF5c2NhbGU7XG4gIGJveC1zaXppbmc6IGJvcmRlci1ib3g7XG4gIG1hcmdpbjogMDtcbiAgcGFkZGluZzogMDtcbn1cblxuYm9keSB7XG4gIGZvbnQtc2l6ZTogMTZweDtcbiAgZm9udC1mYW1pbHk6ICdGaXJhIFNhbnMnLCBzYW5zLXNlcmlmO1xuICBsaW5lLWhlaWdodDogMS42ZW07XG4gIG92ZXJmbG93LXg6IGhpZGRlbjtcblxuICB0cmFuc2l0aW9uOiBiYWNrZ3JvdW5kLWNvbG9yIDIwMG1zIGN1YmljLWJlemllcigwLjI1LCAwLjQ2LCAwLjQ1LCAwLjk0KSwgY29sb3IgNDAwbXMgZWFzZS1pbi1vdXQ7XG5cbiAgJi5kYXJrLW1vZGUge1xuICAgIEBpbmNsdWRlIGRhcmttb2RlO1xuICB9XG5cbiAgJi5saWdodC1tb2RlIHtcbiAgICBAaW5jbHVkZSBsaWdodG1vZGU7XG4gIH1cbn1cblxuaDEsXG5oMixcbmgzLFxuaDQge1xuICBmb250LXdlaWdodDogNDAwO1xufVxuXG5zdmcge1xuICBmb250LXNpemU6IDE0cHg7XG59XG5cbmEge1xuICB0ZXh0LWRlY29yYXRpb246IG5vbmU7XG4gIGNvbG9yOiAjZmZmO1xuICB0cmFuc2l0aW9uOiBjb2xvciAxNTBtcyBlYXNlLWluLW91dDtcbiAgY3Vyc29yOiBwb2ludGVyO1xuXG4gICY6aG92ZXIge1xuICAgIGNvbG9yOiBtYXAtZ2V0KCRvcmFuZ2UsIDkwMCk7XG4gIH1cblxuICAmLmFjdGl2ZSB7XG4gICAgY29sb3I6IG1hcC1nZXQoJG9yYW5nZSwgNzAwKTtcbiAgfVxufVxuIiwiQHVzZSAnY29sb3JzJ2FzICo7XG5cbkBtaXhpbiBkYXJrbW9kZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IG1hcC1nZXQoJGdyZXksIDUwMCk7XG4gIGNvbG9yOiBtYXAtZ2V0KCRncmVlbiwgMTAwKTtcblxuICAuYnVsbGV0IHtcbiAgICBib3JkZXI6IDNweCBzb2xpZCBtYXAtZ2V0KCRncmV5LCA1MDApO1xuICB9XG59XG4iLCJAdXNlICdjb2xvcnMnYXMgKjtcblxuQG1peGluIGxpZ2h0bW9kZSB7XG4gIGJhY2tncm91bmQtY29sb3I6IG1peChtYXAtZ2V0KCRncmVlbiwgMTAwKSwgI2ZmZiwgMjAlKTtcbiAgY29sb3I6IG1hcC1nZXQoJGdyZXksIDkwMCk7XG5cbiAgLmJ1bGxldCB7XG4gICAgYm9yZGVyOiAzcHggc29saWQgI2ZmZjtcbiAgfVxufVxuIl19 */
+
+/*# sourceMappingURL=styles.css.map*/
