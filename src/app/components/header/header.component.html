@@ -1,0 +1,7 @@
+<img src="assets/svg/logo.svg" alt="Logo Abelfubu" />
+<a [class.rotate-in]="isDarkMode" [class.rotate-out]="!isDarkMode"
+  ><app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon
+></a>
+<a [class.rotate-in]="!isDarkMode" [class.rotate-out]="isDarkMode"
+  ><app-dark-mode-icon (click)="onDarkToggled.emit()"></app-dark-mode-icon
+></a>

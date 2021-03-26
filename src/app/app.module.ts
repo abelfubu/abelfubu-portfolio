@@ -1,18 +1,26 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
+import { HttpClientModule } from '@angular/common/http'
+import { NgModule } from '@angular/core'
+import { BrowserModule } from '@angular/platform-browser'
+import { SidenavModule } from '@app/components/sidenav/sidenav.module'
+import { SvgIconsModule } from '@shared/svg-icons/svg-icons.module'
+import { AppRoutingModule } from './app-routing.module'
+import { AppComponent } from './app.component'
+import { HeaderComponent } from './components/header/header.component'
+import { HomeModule } from './pages/home/home.module'
+import { LayoutModule } from '@angular/cdk/layout'
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [AppComponent, HeaderComponent],
   imports: [
+    HomeModule,
+    LayoutModule,
+    SidenavModule,
     BrowserModule,
-    AppRoutingModule
+    SvgIconsModule,
+    HttpClientModule,
+    AppRoutingModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

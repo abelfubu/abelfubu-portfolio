@@ -1,0 +1,94 @@
+@use 'index' as *;
+
+:host {
+  display: block;
+  background-color: map-get($grey, 800);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 82px;
+  @include flex;
+  padding: 0 8%;
+  @include shadow(small);
+
+  img {
+    max-width: 9em;
+  }
+
+  a {
+    position: absolute;
+    right: 8%;
+    height: 28px;
+    cursor: pointer;
+    color: map-get($orange, 400);
+
+    svg {
+      height: 28px;
+    }
+
+    &:hover {
+    }
+  }
+}
+
+.rotate-in {
+  -webkit-animation: rotate-in-center 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: rotate-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+.rotate-out {
+  -webkit-animation: rotate-out-center 0.6s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  animation: rotate-out-center 1s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+  // z-index: -1;
+}
+
+@-webkit-keyframes rotate-out-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+@keyframes rotate-out-center {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+@keyframes rotate-in-center {
+  0% {
+    -webkit-transform: rotate(-360deg);
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+    opacity: 1;
+  }
+}

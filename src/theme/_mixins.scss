@@ -1,0 +1,28 @@
+@use 'colors' as *;
+
+@mixin grid($columns: 3, $gap: 16px) {
+  display: grid;
+  grid-template-columns: repeat($columns, 1fr);
+  grid-gap: $gap;
+  @content;
+}
+
+@mixin flex($justify: space-between, $direction: row) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: center;
+  @content;
+}
+
+@mixin shadow($size: big) {
+  @if $size == small {
+    box-shadow: 0 0 8px 1px rgba(map-get($grey, 900), 0.3);
+  } @else {
+    box-shadow: 0 0 22px 3px rgba(map-get($grey, 900), 0.3);
+  }
+}
+
+@mixin padding {
+  padding: 32px 8%;
+}

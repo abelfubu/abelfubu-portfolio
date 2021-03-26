@@ -1,0 +1,66 @@
+<ng-container *ngIf="scroll$ | async"></ng-container>
+<!-- SECTION ONE -->
+<section #section>
+  <div>
+    <h2>Abel de la Fuente</h2>
+    <h3>Angular | Typescript | sass | nodejs</h3>
+    <p>
+      Curioso, creativo, proactivo, versátil, me encanta innovar y descubrir cosas nuevas, la
+      música, lo místico, el café y las tecnologías. De pequeño crecí entre ordenadores y siempre
+      quise descubrir qué es lo que pasaba dentro de esas cajas silenciosas. Me interesé por el
+      diseño, por la ilustración, por la música y después por cómo unir todo esto en una sola
+      filosofía.
+    </p>
+    <p>
+      En los últimos años me he especializado en desarrollo de aplicaciones tanto corporativas como
+      para pequeños usuarios, utilizando como principal stack Angular, Typescript y Nodejs. Deseo
+      poder aportar mis conocimientos y seguir aprendiendo y creciendo en el mundo del desarrollo
+      web que me apasiona.
+    </p>
+    <span
+      >Granollers <strong>Barcelona</strong> España | Teléfono <strong>617 36 61 35</strong></span
+    >
+  </div>
+  <div class="img">
+    <img
+      src="https://media-exp1.licdn.com/dms/image/C4E03AQHk550y2tSIjg/profile-displayphoto-shrink_800_800/0/1593251933328?e=1622073600&v=beta&t=JBrO1Z1cOYDoZFw2MvMXFCpsykP4iM0U2RC9CLbvWZA"
+      alt=""
+    />
+  </div>
+</section>
+
+<!-- SECTION TWO -->
+<section #section>
+  <div>
+    <h2>Experiencia laboral</h2>
+    <br />
+    <!-- BRAVENT -->
+    <div class="exp-item">
+      <div class="flex-between">
+        <h3>Bravent | Frontend Developer</h3>
+        <small>2020 - 2021</small>
+      </div>
+      <p>Desarrollo de aplicaciones con Angular, Typescript, Sass, Node.js</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTINO THREE -->
+<section #section>
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis quis quos
+    reiciendis molestias laudantium consequuntur officia dolore quo, odio quasi quaerat ea, culpa
+    quod expedita. A eos fugiat blanditiis iste vel veritatis consequuntur.
+  </p>
+  <span>@abelfubu <strong>Abel de la Fuente</strong></span>
+</section>
+
+<!-- RIGHT BULLETS -->
+<div class="bullets" *ngIf="sections?.length">
+  <div
+    class="bullet"
+    [class.filled]="index === currentPage"
+    *ngFor="let section of sections; let index = index"
+    (click)="handleBulletClick(index)"
+  ></div>
+</div>
