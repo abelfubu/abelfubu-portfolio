@@ -1,5 +1,4 @@
 import { Directive, ElementRef, OnInit } from '@angular/core'
-declare module 'hover-effect'
 import hoverEffect from 'hover-effect'
 
 @Directive({
