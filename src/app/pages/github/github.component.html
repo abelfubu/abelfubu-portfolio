@@ -1,5 +1,35 @@
 <ng-container *ngIf="repos$ | async as repos">
-  <div class="card" *ngFor="let repo of repos">
-    <p>{{ repo.name }} - {{ repo.updated_at | date }} - {{ repo.language }}</p>
+  <div class="grid" *ngIf="user$ | async as user">
+    <div class="github">
+      <div class="github__title">
+        <h2>Github</h2>
+      </div>
+      <p class="flex">
+        <app-github-icon size="1em"></app-github-icon>
+        Username
+        <a [href]="user.html_url"> {{ user.login }}</a>
+      </p>
+      <p>Created at: {{ user.created_at | date }}</p>
+      <p>{{ user.bio }}</p>
+      <p>Public repos: {{ user.public_repos }}</p>
+      <p>Followers: {{ user.followers }}</p>
+    </div>
+    <div class="chart">
+      <ngx-charts-pie-chart
+        [results]="chartData"
+        [gradient]="false"
+        [labels]="true"
+        [scheme]="colorScheme"
+        [legendPosition]="'bellow'"
+        (select)="onSelect($event)"
+        (activate)="onActivate($event)"
+        (deactivate)="onDeactivate($event)"
+      >
+      </ngx-charts-pie-chart>
+    </div>
+  </div>
+  <h2>Repositories</h2>
+  <div class="card-grid">
+    <app-repo-card *ngFor="let repo of repos" [repo]="repo"></app-repo-card>
   </div>
 </ng-container>

@@ -8,6 +8,11 @@ const routes: Routes = [
     path: 'github',
     loadChildren: () => import('./pages/github/github.module').then(m => m.GithubModule),
   },
+  {
+    path: 'contact',
+    loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
+  },
+  { path: 'gallery', loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule) },
 ]
 
 @NgModule({

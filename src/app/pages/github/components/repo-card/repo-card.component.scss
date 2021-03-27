@@ -1,0 +1,16 @@
+@use "index" as *;
+
+:host {
+  border-radius: 8px;
+  box-shadow: 0 0 22px 0 #23232330;
+  padding: 1em;
+  background-color: rgba(map-get($green, 600), 40%);
+
+  .flex-between {
+    @include flex;
+  }
+
+  a:hover {
+    color: map-get($orange, 200);
+  }
+}

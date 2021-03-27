@@ -1,0 +1,9 @@
+:host {
+  display: block;
+
+  .map {
+    filter: grayscale(50%) contrast(110%);
+    position: relative;
+    bottom: 0;
+  }
+}

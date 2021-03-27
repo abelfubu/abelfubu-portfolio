@@ -89,6 +89,7 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   }
 
   handleTouchEnd(event: TouchEvent): void {
+    event.preventDefault()
     const isNextPage = event.changedTouches[0].clientY > this.touchStart
     if (!isNextPage && this.currentPage !== this.sections.length - 1) {
       this.scrollNextPage()

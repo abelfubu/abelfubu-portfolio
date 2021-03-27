@@ -1,6 +1,7 @@
 import { HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { SidenavModule } from '@app/components/sidenav/sidenav.module'
 import { SvgIconsModule } from '@shared/svg-icons/svg-icons.module'
 import { AppRoutingModule } from './app-routing.module'
@@ -19,6 +20,7 @@ import { LayoutModule } from '@angular/cdk/layout'
     SvgIconsModule,
     HttpClientModule,
     AppRoutingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

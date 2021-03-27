@@ -4,17 +4,6 @@
   display: block;
   position: relative;
 
-  h2 {
-    font-size: 2em;
-  }
-
-  h3 {
-    text-transform: uppercase;
-    color: map-get($orange, 800);
-    font-size: 0.8em;
-    margin-bottom: 0.5em;
-  }
-
   .img {
     margin: auto;
     width: 400px;
