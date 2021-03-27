@@ -20,7 +20,10 @@
   .chart {
     height: 80%;
     margin: auto;
-    width: 100%;
+    max-width: 100%;
+    @include smallX {
+      background-color: red;
+    }
   }
 
   .github {

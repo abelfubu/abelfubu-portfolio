@@ -5,7 +5,8 @@ import { Repo } from '../../models'
   selector: 'app-repo-card',
   template: `
     <h4>
-      <a [href]="repo.html_url">{{ repo.name | uppercase }}</a>
+      <app-github-icon [size]="'1em'"></app-github-icon>
+      <a [href]="repo.html_url"> {{ repo.name | uppercase }}</a>
     </h4>
     <div class="flex-between">
       <p>{{ repo.updated_at | date }}</p>

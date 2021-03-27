@@ -1,16 +1,14 @@
-import { DOCUMENT } from '@angular/common'
 import {
   AfterViewInit,
   ChangeDetectorRef,
   Component,
   ElementRef,
-  Inject,
   OnDestroy,
   QueryList,
   Renderer2,
   ViewChildren,
 } from '@angular/core'
-import { fromEvent, Observable, Subject } from 'rxjs'
+import { fromEvent, Subject } from 'rxjs'
 import { takeUntil, tap, throttleTime } from 'rxjs/operators'
 
 @Component({
@@ -19,7 +17,6 @@ import { takeUntil, tap, throttleTime } from 'rxjs/operators'
   styleUrls: ['./home.component.scss'],
 })
 export class HomeComponent implements AfterViewInit, OnDestroy {
-  window = this.document.defaultView
   currentPage = 0
   touchStart = 0
   @ViewChildren('section')
@@ -44,7 +41,6 @@ export class HomeComponent implements AfterViewInit, OnDestroy {
   )
 
   constructor(
-    @Inject(DOCUMENT) private document: HTMLDocument,
     private renderer: Renderer2,
     private el: ElementRef,
     private cdr: ChangeDetectorRef,

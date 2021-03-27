@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  background-color: map-get($grey, 800);
+  // background-color: map-get($grey, 800);
   position: absolute;
   top: 0;
   left: 0;
@@ -10,7 +10,7 @@
   height: 82px;
   @include flex;
   padding: 0 8%;
-  @include shadow(small);
+  // @include shadow(small);
 
   img {
     max-width: 9em;
@@ -19,7 +19,7 @@
   a {
     height: 28px;
     cursor: pointer;
-    color: map-get($orange, 400);
+    color: map-get($grey, 300);
 
     svg {
       height: 28px;

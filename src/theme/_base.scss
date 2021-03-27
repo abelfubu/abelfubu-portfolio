@@ -61,10 +61,10 @@ a {
   cursor: pointer;
 
   &:hover {
-    color: map-get($orange, 900);
+    color: map-get($grey, 200);
   }
 
   &.active {
-    color: map-get($orange, 700);
+    color: map-get($orange, 400);
   }
 }

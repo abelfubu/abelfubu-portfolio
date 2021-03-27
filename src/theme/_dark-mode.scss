@@ -2,7 +2,7 @@
 
 @mixin darkmode {
   background-color: map-get($grey, 500);
-  color: map-get($green, 100);
+  color: #fff;
 
   .bullet {
     border: 3px solid map-get($grey, 500);
