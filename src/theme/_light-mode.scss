@@ -1,7 +1,7 @@
 @use 'colors'as *;
 
 @mixin lightmode {
-  background-color: mix(map-get($green, 100), #fff, 20%);
+  background-color: #fff;
   color: map-get($grey, 900);
 
   .bullet {

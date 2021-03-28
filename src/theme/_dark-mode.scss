@@ -1,4 +1,5 @@
 @use 'colors'as *;
+@use "scrollbars" as s;
 
 @mixin darkmode {
   background-color: map-get($grey, 500);

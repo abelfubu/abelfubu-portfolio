@@ -1,14 +1,30 @@
-<img src="assets/svg/logo.svg" alt="Logo Abelfubu" />
+<div class="flex">
+  <app-logo-icon></app-logo-icon>
+  <h1>ABELFUBU</h1>
+</div>
+<audio controls="controls" hidden #audio>
+  <source src="https://archive.org/download/ErikSatie_201903/01%20Gnossiennes%20No.1.mp3" />
+</audio>
 <div class="social">
   <a href="https://github.com/abelfubu" target="_blank"><app-github-icon></app-github-icon></a>
   <a href="https://www.linkedin.com/in/abelfubu/" target="_blank">
     <app-linkedin-icon></app-linkedin-icon>
   </a>
+  <a *ngIf="!audio.paused" (click)="audio.pause()"><app-pause-icon></app-pause-icon></a>
+  <a *ngIf="audio.paused" (click)="audio.play()"><app-play-icon></app-play-icon></a>
   <div class="dark">
-    <a [class.rotate-in]="isDarkMode" [class.rotate-out]="!isDarkMode">
-      <app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon>
+    <a
+      [style.z-index]="isDarkMode ? 1 : -1"
+      [class.rotate-in]="isDarkMode"
+      [class.rotate-out]="!isDarkMode"
+    >
+      <app-light-mode-icon (click)="onDarkToggled.emit(); audio.pause()"></app-light-mode-icon>
     </a>
-    <a [class.rotate-in]="!isDarkMode" [class.rotate-out]="isDarkMode">
+    <a
+      [style.z-index]="isDarkMode ? -1 : 1"
+      [class.rotate-in]="!isDarkMode"
+      [class.rotate-out]="isDarkMode"
+    >
       <app-dark-mode-icon (click)="onDarkToggled.emit()"></app-dark-mode-icon>
     </a>
   </div>

@@ -21,6 +21,7 @@
   .chart {
     height: 80%;
     margin: auto;
+    width: 100%;
   }
 
   .github {
@@ -47,6 +48,10 @@
     h2 {
       font-size: 2.5em;
     }
+
+    .slide-in {
+      animation: slide-in-bottom 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
   }
 
   .card-grid {
@@ -64,5 +69,16 @@
     @include largeX {
       @include grid(4, 1em);
     }
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(1000px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
   }
 }

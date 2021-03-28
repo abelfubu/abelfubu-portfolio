@@ -1,10 +1,10 @@
-import { NgModule } from '@angular/core'
 import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
+import { HoverDirectiveModule } from '@app/shared/directives/hover-directive/hover-directive.module.ts.module'
 import { HomeComponent } from './home.component'
-import { SharedModule } from '@app/shared/shared.module'
 
 @NgModule({
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, HoverDirectiveModule],
   declarations: [HomeComponent],
 })
 export class HomeModule {}

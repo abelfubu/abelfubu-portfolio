@@ -8,8 +8,8 @@ import { Component } from '@angular/core'
       id="Capa_1"
       xmlns="http://www.w3.org/2000/svg"
       xmlns:xlink="http://www.w3.org/1999/xlink"
-      width="2em"
-      height="2em"
+      width="1.5em"
+      height="1.5em"
       viewBox="0 0 510 510"
       fill="currentcolor"
     >

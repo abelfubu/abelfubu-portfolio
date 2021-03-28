@@ -23,7 +23,14 @@
       >Granollers <strong>Barcelona</strong> España | Teléfono <strong>617 36 61 35</strong></span
     >
   </div>
-  <div class="img" hoverEffect>
+  <div
+    class="img"
+    hoverEffect
+    image1="assets/images/perfil1.jfif"
+    image2="assets/images/perfil2.jpg"
+    bgImage="assets/images/bg-old.jfif"
+    [style.backgroundImage]="'url(assets/images/bg-old.jfif)'"
+  >
     <!-- <img
       src="https://media-exp1.licdn.com/dms/image/C4E03AQHk550y2tSIjg/profile-displayphoto-shrink_800_800/0/1593251933328?e=1622073600&v=beta&t=JBrO1Z1cOYDoZFw2MvMXFCpsykP4iM0U2RC9CLbvWZA"
       alt=""
@@ -33,8 +40,9 @@
 
 <!-- SECTION TWO -->
 <section #section>
-  <div>
-    <h2>Experiencia laboral</h2>
+  <div class="img" hoverEffect image1="assets/eye.webp" image2="assets/images/studies2.jfif"></div>
+  <div class="text">
+    <h2>Experiencia</h2>
     <br />
     <!-- BRAVENT -->
     <div class="exp-item">
@@ -44,16 +52,37 @@
       </div>
       <p>Desarrollo de aplicaciones con Angular, Typescript, Sass, Node.js</p>
     </div>
+    <div class="exp-item">
+      <div class="flex-between">
+        <h3>Furnilix | Frontend Developer</h3>
+        <small>2020</small>
+      </div>
+      <p>
+        Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
+        Sass, Node.js
+      </p>
+    </div>
   </div>
 </section>
 
 <!-- SECTINO THREE -->
 <section #section>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore perferendis quis quos
-    reiciendis molestias laudantium consequuntur officia dolore quo, odio quasi quaerat ea, culpa
-    quod expedita. A eos fugiat blanditiis iste vel veritatis consequuntur.
-  </p>
+  <div>
+    <h2>Estudios</h2>
+    <br />
+    <div class="exp-item">
+      <div class="flex-between">
+        <h3>Furnilix | Frontend Developer</h3>
+        <small>2020</small>
+      </div>
+      <p>
+        Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
+        Sass, Node.js
+      </p>
+    </div>
+  </div>
+  <div class="img" hoverEffect image1="assets/eye.webp" image2="assets/sketch.jpg"></div>
+
   <span>@abelfubu <strong>Abel de la Fuente</strong></span>
 </section>
 

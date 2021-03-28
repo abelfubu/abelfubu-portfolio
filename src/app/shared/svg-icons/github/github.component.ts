@@ -18,7 +18,7 @@ import { Component, Input } from '@angular/core'
   </svg>`,
 })
 export class GithubIconComponent {
-  @Input() size = '2em'
+  @Input() size = '1.5em'
   @Input() color = 'currentColor'
   @Input() strokeWidth = '2'
   @Input() strokeType = 'round'

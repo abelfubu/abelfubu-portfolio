@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common'
 import { NgxChartsModule } from '@swimlane/ngx-charts'
 import { GithubComponent } from './github.component'
 import { GithubRoutingModule } from './github-routing.module'
-import { SvgIconsModule } from '@app/shared/svg-icons/svg-icons.module';
+import { SvgIconsModule } from '@app/shared/svg-icons/svg-icons.module'
 import { RepoCardComponent } from './components/repo-card/repo-card.component'
 
 @NgModule({

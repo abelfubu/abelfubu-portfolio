@@ -22,7 +22,6 @@ import { LayoutModule } from '@angular/cdk/layout'
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

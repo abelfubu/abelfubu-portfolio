@@ -16,7 +16,7 @@ import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/l
   styleUrls: ['./sidenav.component.scss'],
 })
 export class SidenavComponent implements OnInit, AfterContentInit {
-  width = '3.3em'
+  width = '2.8em'
   height = '80px'
   isSmall = false
 
@@ -42,7 +42,7 @@ export class SidenavComponent implements OnInit, AfterContentInit {
         )
       } else {
         this.isSmall = false
-        this.width = '3.3em'
+        this.width = '2.8em'
         this.items.forEach(item =>
           this.renderer.setStyle(item.nativeElement.children[1], 'display', 'block'),
         )
@@ -55,7 +55,7 @@ export class SidenavComponent implements OnInit, AfterContentInit {
     if (this.isSmall) {
       return
     }
-    this.width = '12em'
+    this.width = '10em'
     for (const item of this.items) {
       if (!item.nativeElement?.children[1]) {
         return
@@ -70,7 +70,7 @@ export class SidenavComponent implements OnInit, AfterContentInit {
     if (this.isSmall) {
       return
     }
-    this.width = '3.3em'
+    this.width = '2.8em'
     for (const item of this.items) {
       if (!item.nativeElement?.children[1]) {
         return

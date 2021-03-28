@@ -1,28 +1,32 @@
 @use 'index' as *;
 
 :host {
-  display: block;
-  // background-color: map-get($grey, 800);
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
   height: 82px;
   @include flex;
+  align-items: center;
   padding: 0 8%;
-  // @include shadow(small);
+  background-color: var(--scrollbar);
+
+  h1 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 32px;
+  }
 
   img {
     max-width: 9em;
   }
 
   a {
-    height: 28px;
+    height: 20px;
     cursor: pointer;
     color: map-get($grey, 300);
 
-    svg {
-      height: 28px;
+    &:hover {
+      color: map-get($orange, 200);
     }
   }
 
@@ -31,18 +35,27 @@
 
     a {
       position: absolute;
-      top: 26px;
+      top: 28px;
       right: 8%;
     }
   }
 
   .social {
-    padding-right: 44px;
+    padding-right: 36px;
     display: flex;
 
     a {
       margin-left: 16px;
     }
+  }
+
+  .flex {
+    app-logo-icon {
+      transform: translateY(4px);
+      margin-right: 8px;
+    }
+    display: flex;
+    align-items: center;
   }
 }
 

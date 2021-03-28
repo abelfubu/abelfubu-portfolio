@@ -5,8 +5,8 @@ import { Component, OnInit } from '@angular/core'
   template: `
     <svg
       viewBox="0 0 32 32"
-      width="2em"
-      height="2em"
+      width="1.5em"
+      height="1.5em"
       fill="none"
       stroke="currentcolor"
       stroke-linecap="round"
