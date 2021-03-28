@@ -12,11 +12,14 @@ const routes: Routes = [
     path: 'contact',
     loadChildren: () => import('./pages/contact/contact.module').then(m => m.ContactModule),
   },
-  { path: 'gallery', loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule) },
+  {
+    path: 'gallery',
+    loadChildren: () => import('./pages/portfolio/portfolio.module').then(m => m.PortfolioModule),
+  },
 ]
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, { useHash: true })],
   exports: [RouterModule],
 })
 export class AppRoutingModule {}
