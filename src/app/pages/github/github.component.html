@@ -7,7 +7,7 @@
       <p class="flex">
         <app-github-icon size="1em"></app-github-icon>
         Username
-        <a [href]="user.html_url"> {{ user.login }}</a>
+        <a [href]="user.html_url" target="_blank"> {{ user.login }}</a>
       </p>
       <p>Created at: {{ user.created_at | date }}</p>
       <p>{{ user.bio }}</p>

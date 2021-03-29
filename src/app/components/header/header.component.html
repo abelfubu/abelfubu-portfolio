@@ -2,7 +2,7 @@
   <app-logo-icon></app-logo-icon>
   <h1>ABELFUBU</h1>
 </div>
-<audio controls="controls" hidden #audio>
+<audio controls="controls" hidden #audio loop="true" preload="metadata">
   <source src="https://archive.org/download/ErikSatie_201903/01%20Gnossiennes%20No.1.mp3" />
 </audio>
 <div class="social">
@@ -10,15 +10,19 @@
   <a href="https://www.linkedin.com/in/abelfubu/" target="_blank">
     <app-linkedin-icon></app-linkedin-icon>
   </a>
-  <a *ngIf="!audio.paused" (click)="audio.pause()"><app-pause-icon></app-pause-icon></a>
-  <a *ngIf="audio.paused" (click)="audio.play()"><app-play-icon></app-play-icon></a>
+  <a class="audio" *ngIf="!audio.paused" (click)="audio.pause()">
+    <app-pause-icon></app-pause-icon>
+  </a>
+  <a class="audio" *ngIf="audio.paused" (click)="audio.play()">
+    <app-play-icon></app-play-icon>
+  </a>
   <div class="dark">
     <a
       [style.z-index]="isDarkMode ? 1 : -1"
       [class.rotate-in]="isDarkMode"
       [class.rotate-out]="!isDarkMode"
     >
-      <app-light-mode-icon (click)="onDarkToggled.emit(); audio.pause()"></app-light-mode-icon>
+      <app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon>
     </a>
     <a
       [style.z-index]="isDarkMode ? -1 : 1"

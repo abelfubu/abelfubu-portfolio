@@ -57,6 +57,11 @@
     display: flex;
     align-items: center;
   }
+
+  .audio {
+    animation: flicker-1 2s linear infinite both;
+    border-radius: 0.3em;
+  }
 }
 
 .rotate-in {
@@ -116,5 +121,16 @@
     -webkit-transform: rotate(0);
     transform: rotate(0);
     opacity: 1;
+  }
+}
+
+@keyframes flicker-1 {
+  0%,
+  100% {
+    background-color: transparent;
+  }
+  49% {
+    background-color: rgba(map-get($orange, 400), 10%);
+    box-shadow: 0 0 0 0.4em rgba(map-get($orange, 400), 10%);
   }
 }
