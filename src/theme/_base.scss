@@ -2,6 +2,7 @@
 @use 'dark-mode' as *;
 @use 'light-mode' as *;
 @use 'scrollbars' as *;
+@use 'mixins'as *;
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -72,5 +73,70 @@ a {
 
   &.active {
     color: map-get($orange, 400);
+  }
+}
+
+section {
+  @include padding;
+  height: 100vh;
+  position: fixed;
+  height: calc(100vh - 82px);
+  top: -100vh;
+  z-index: -1;
+  @include grid(2, 16px);
+  align-items: center;
+
+  span {
+    position: absolute;
+    bottom: 16px;
+    left: 8%;
+    font-size: 12px;
+  }
+
+  @media (max-width: 900px) {
+    @include flex(column);
+    font-size: 0.8em;
+    .img {
+      display: none;
+    }
+    iframe {
+      display: none;
+    }
+    span {
+      display: none;
+    }
+  }
+}
+
+.on-screen {
+  top: 82px;
+}
+
+.bullets {
+  z-index: 10;
+  position: fixed;
+  right: 1.5em;
+  top: 82px;
+  height: calc(100vh - 82px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .bullet {
+    width: 0.7em;
+    height: 0.7em;
+    box-shadow: 0 0 0 1.5px map-get($grey, 300);
+    border-radius: 50%;
+    margin: 8px 0;
+    cursor: pointer;
+  }
+
+  .filled {
+    transition: background-color 200ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    background-color: map-get($grey, 300);
+  }
+
+  @media (max-width: 600px) {
+    display: none;
   }
 }

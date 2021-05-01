@@ -1,98 +1,94 @@
-<ng-container *ngIf="touchstart$ | async"></ng-container>
-<ng-container *ngIf="touchend$ | async"></ng-container>
-<ng-container *ngIf="wheel$ | async"></ng-container>
-<!-- SECTION ONE -->
-<section #section>
-  <div>
-    <h2>Abel de la Fuente</h2>
-    <h3>Angular | Typescript | sass | nodejs</h3>
-    <p>
-      Curioso, creativo, proactivo, versátil, me encanta innovar y descubrir cosas nuevas, la
-      música, lo místico, el café y las tecnologías. De pequeño crecí entre ordenadores y siempre
-      quise descubrir qué es lo que pasaba dentro de esas cajas silenciosas. Me interesé por el
-      diseño, por la ilustración, por la música y después por cómo unir todo esto en una sola
-      filosofía.
-    </p>
-    <p>
-      En los últimos años me he especializado en desarrollo de aplicaciones tanto corporativas como
-      para pequeños usuarios, utilizando como principal stack Angular, Typescript y Nodejs. Deseo
-      poder aportar mis conocimientos y seguir aprendiendo y creciendo en el mundo del desarrollo
-      web que me apasiona.
-    </p>
-    <span
-      >Granollers <strong>Barcelona</strong> España | Teléfono <strong>617 36 61 35</strong></span
-    >
-  </div>
-  <div
-    class="img"
-    hoverEffect
-    image1="assets/images/perfil1.jfif"
-    image2="assets/images/perfil2.jpg"
-    bgImage="assets/images/bg-old.jfif"
-    [style.backgroundImage]="'url(assets/images/bg-old.jfif)'"
-  ></div>
-</section>
-
-<!-- SECTION TWO -->
-<section #section>
-  <div
-    class="img"
-    hoverEffect
-    image1="assets/eye.webp"
-    image2="assets/images/studies2.jfif"
-    [style.background-color]="'#ff220050'"
-  ></div>
-  <div class="text">
-    <h2>Experiencia</h2>
-    <br />
-    <!-- BRAVENT -->
-    <div class="exp-item">
-      <div class="flex-between">
-        <h3>Bravent | Frontend Developer</h3>
-        <small>2020 - 2021</small>
-      </div>
-      <p>Desarrollo de aplicaciones con Angular, Typescript, Sass, Node.js</p>
-    </div>
-    <div class="exp-item">
-      <div class="flex-between">
-        <h3>Furnilix | Frontend Developer</h3>
-        <small>2020</small>
-      </div>
+<ng-container scroller>
+  <!-- SECTION ONE -->
+  <section #section>
+    <div>
+      <h2>Abel de la Fuente</h2>
+      <h3>Angular | Typescript | sass | nodejs</h3>
       <p>
-        Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
-        Sass, Node.js
+        Curioso, creativo, proactivo, versátil, me encanta innovar y descubrir cosas nuevas, la
+        música, lo místico, el café y las tecnologías. De pequeño crecí entre ordenadores y siempre
+        quise descubrir qué es lo que pasaba dentro de esas cajas silenciosas. Me interesé por el
+        diseño, por la ilustración, por la música y después por cómo unir todo esto en una sola
+        filosofía.
       </p>
-    </div>
-  </div>
-</section>
-
-<!-- SECTINO THREE -->
-<section #section>
-  <div>
-    <h2>Estudios</h2>
-    <br />
-    <div class="exp-item">
-      <div class="flex-between">
-        <h3>Furnilix | Frontend Developer</h3>
-        <small>2020</small>
-      </div>
       <p>
-        Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
-        Sass, Node.js
+        En los últimos años me he especializado en desarrollo de aplicaciones tanto corporativas
+        como para pequeños usuarios, utilizando como principal stack Angular, Typescript y Nodejs.
+        Deseo poder aportar mis conocimientos y seguir aprendiendo y creciendo en el mundo del
+        desarrollo web que me apasiona.
       </p>
+      <span
+        >Granollers <strong>Barcelona</strong> España | Teléfono <strong>617 36 61 35</strong></span
+      >
     </div>
-  </div>
-  <div class="img" hoverEffect image1="assets/eye.webp" image2="assets/sketch.jpg"></div>
+    <iframe
+      src="https://abelfubu.github.io/portfolio-assets/logo/"
+      frameborder="0"
+      width="85%"
+      height="85%"
+      style="margin-left: auto"
+    ></iframe>
+    <!-- <div
+      class="img"
+      hoverEffect
+      image1="assets/images/perfil1.jfif"
+      image2="assets/images/perfil2.jpg"
+      bgImage="assets/images/bg-old.jfif"
+      [style.backgroundImage]="'url(assets/images/bg-old.jfif)'"
+    ></div> -->
+  </section>
 
-  <span>@abelfubu <strong>Abel de la Fuente</strong></span>
-</section>
+  <!-- SECTION TWO -->
+  <section #section>
+    <div
+      class="img"
+      hoverEffect
+      image1="assets/eye.webp"
+      image2="assets/images/studies2.jfif"
+      [style.background-color]="'#ff220050'"
+    ></div>
+    <div class="text">
+      <h2>Experiencia</h2>
+      <br />
+      <!-- BRAVENT -->
+      <div class="exp-item">
+        <div class="flex-between">
+          <h3>Bravent | Frontend Developer</h3>
+          <small>2020 - 2021</small>
+        </div>
+        <p>Desarrollo de aplicaciones con Angular, Typescript, Sass, Node.js</p>
+      </div>
+      <div class="exp-item">
+        <div class="flex-between">
+          <h3>Furnilix | Frontend Developer</h3>
+          <small>2020</small>
+        </div>
+        <p>
+          Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
+          Sass, Node.js
+        </p>
+      </div>
+    </div>
+  </section>
 
-<!-- RIGHT BULLETS -->
-<div class="bullets" *ngIf="sections?.length">
-  <div
-    class="bullet"
-    [class.filled]="index === currentPage"
-    *ngFor="let section of sections; let index = index"
-    (click)="handleBulletClick(index)"
-  ></div>
-</div>
+  <!-- SECTINO THREE -->
+  <section #section>
+    <div>
+      <h2>Estudios</h2>
+      <br />
+      <div class="exp-item">
+        <div class="flex-between">
+          <h3>Furnilix | Frontend Developer</h3>
+          <small>2020</small>
+        </div>
+        <p>
+          Desarrollo de aplicación para una startup de alquiler de muebles con Angular, Typescript,
+          Sass, Node.js
+        </p>
+      </div>
+    </div>
+    <div class="img" hoverEffect image1="assets/eye.webp" image2="assets/sketch.jpg"></div>
+
+    <span>@abelfubu <strong>Abel de la Fuente</strong></span>
+  </section>
+</ng-container>

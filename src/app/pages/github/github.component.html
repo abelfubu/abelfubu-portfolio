@@ -28,8 +28,10 @@
       </ngx-charts-pie-chart>
     </div>
   </div>
-  <h2>Repositories</h2>
-  <div class="card-grid">
-    <app-repo-card *ngFor="let repo of repos" class="slide-in" [repo]="repo"></app-repo-card>
-  </div>
+  <ng-container *ngIf="chartData.length">
+    <h2>Repositories</h2>
+    <div class="card-grid">
+      <app-repo-card *ngFor="let repo of repos" class="slide-in" [repo]="repo"></app-repo-card>
+    </div>
+  </ng-container>
 </ng-container>

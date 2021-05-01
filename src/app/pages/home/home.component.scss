@@ -18,6 +18,10 @@
     border-radius: 50%;
   }
 
+  ::ng-deep iframe .spline-watermark img {
+    display: none;
+  }
+
   section {
     @include padding;
     height: 100vh;
@@ -39,6 +43,9 @@
       @include flex(column);
       font-size: 0.8em;
       .img {
+        display: none;
+      }
+      iframe {
         display: none;
       }
       span {

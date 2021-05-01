@@ -1,15 +1,12 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule } from '@angular/common'
+import { NgModule } from '@angular/core'
+import { ScrollerModule } from '@app/shared/directives/scroller/scroller.module'
 
-import { PortfolioRoutingModule } from './portfolio-routing.module';
-import { PortfolioComponent } from './portfolio.component';
-
+import { PortfolioRoutingModule } from './portfolio-routing.module'
+import { PortfolioComponent } from './portfolio.component'
 
 @NgModule({
   declarations: [PortfolioComponent],
-  imports: [
-    CommonModule,
-    PortfolioRoutingModule
-  ]
+  imports: [CommonModule, PortfolioRoutingModule, ScrollerModule],
 })
-export class PortfolioModule { }
+export class PortfolioModule {}

@@ -1,3 +1,4 @@
+import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
 import {
   AfterContentInit,
   Component,
@@ -8,7 +9,6 @@ import {
   QueryList,
   Renderer2,
 } from '@angular/core'
-import { BreakpointObserver, Breakpoints, BreakpointState } from '@angular/cdk/layout'
 
 @Component({
   selector: 'app-sidenav',
@@ -33,7 +33,6 @@ export class SidenavComponent implements OnInit, AfterContentInit {
 
   ngAfterContentInit(): void {
     this.bo.observe([Breakpoints.XSmall]).subscribe((state: BreakpointState) => {
-      console.log(state)
       if (state.matches) {
         this.isSmall = true
         this.width = '100%'
@@ -48,7 +47,6 @@ export class SidenavComponent implements OnInit, AfterContentInit {
         )
       }
     })
-    console.log(this.items)
   }
 
   async onMouseOver(): Promise<void> {
