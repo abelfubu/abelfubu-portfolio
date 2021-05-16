@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-home-icon',
@@ -20,8 +20,4 @@ import { Component, OnInit } from '@angular/core'
   `,
   styles: [],
 })
-export class HomeIconComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class HomeIconComponent {}

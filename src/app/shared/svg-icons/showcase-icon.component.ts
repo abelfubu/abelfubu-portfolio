@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-showcase-icon',
@@ -19,8 +19,4 @@ import { Component, OnInit } from '@angular/core'
   `,
   styles: [],
 })
-export class ShowcaseIconComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class ShowcaseIconComponent {}

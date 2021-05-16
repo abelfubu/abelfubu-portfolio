@@ -15,5 +15,5 @@ import {
 })
 export class HeaderComponent {
   @Input() isDarkMode!: boolean
-  @Output() onDarkToggled = new EventEmitter()
+  @Output() darkToggled = new EventEmitter()
 }

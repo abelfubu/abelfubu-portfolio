@@ -5,17 +5,23 @@ import {
   ContentChildren,
   ElementRef,
   HostBinding,
-  OnInit,
   QueryList,
   Renderer2,
 } from '@angular/core'
 
 @Component({
   selector: 'app-sidenav',
-  templateUrl: './sidenav.component.html',
+  template: `<div
+    class="card"
+    [attr.height]="height"
+    (mouseover)="onMouseOver()"
+    (mouseleave)="onMouseLeave()"
+  >
+    <ng-content></ng-content>
+  </div>`,
   styleUrls: ['./sidenav.component.scss'],
 })
-export class SidenavComponent implements OnInit, AfterContentInit {
+export class SidenavComponent implements AfterContentInit {
   width = '2.8em'
   height = '80px'
   isSmall = false
@@ -28,8 +34,6 @@ export class SidenavComponent implements OnInit, AfterContentInit {
   }
 
   constructor(private renderer: Renderer2, private bo: BreakpointObserver) {}
-
-  ngOnInit(): void {}
 
   ngAfterContentInit(): void {
     this.bo.observe([Breakpoints.XSmall]).subscribe((state: BreakpointState) => {

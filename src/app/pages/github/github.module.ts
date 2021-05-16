@@ -6,7 +6,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts'
 import { GithubComponent } from './github.component'
 import { GithubRoutingModule } from './github-routing.module'
 import { SvgIconsModule } from '@app/shared/svg-icons/svg-icons.module'
-import { RepoCardComponent } from './components/repo-card/repo-card.component'
+import { RepoCardComponent } from './components/repo-card.component'
 
 @NgModule({
   declarations: [GithubComponent, RepoCardComponent],

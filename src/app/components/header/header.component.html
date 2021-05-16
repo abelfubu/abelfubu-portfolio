@@ -22,14 +22,14 @@
       [class.rotate-in]="isDarkMode"
       [class.rotate-out]="!isDarkMode"
     >
-      <app-light-mode-icon (click)="onDarkToggled.emit()"></app-light-mode-icon>
+      <app-light-mode-icon (click)="darkToggled.emit()"></app-light-mode-icon>
     </a>
     <a
       [style.z-index]="isDarkMode ? -1 : 1"
       [class.rotate-in]="!isDarkMode"
       [class.rotate-out]="isDarkMode"
     >
-      <app-dark-mode-icon (click)="onDarkToggled.emit()"></app-dark-mode-icon>
+      <app-dark-mode-icon (click)="darkToggled.emit()"></app-dark-mode-icon>
     </a>
   </div>
 </div>

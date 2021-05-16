@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'app-pause-icon',
@@ -20,8 +20,4 @@ import { Component, OnInit } from '@angular/core'
   `,
   styles: [],
 })
-export class PauseIconComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class PauseIconComponent {}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core'
+import { Component } from '@angular/core'
 import { Observable } from 'rxjs'
 import { map, tap } from 'rxjs/operators'
 import { Repo, User } from './models'
@@ -9,7 +9,7 @@ import { GithubService } from './services/github.service'
   templateUrl: './github.component.html',
   styleUrls: ['./github.component.scss'],
 })
-export class GithubComponent implements OnInit {
+export class GithubComponent {
   languages!: Map<string, number>
   chartData!: { name: string; value: number }[]
   view: [number, number] = [0, 400]
@@ -25,8 +25,6 @@ export class GithubComponent implements OnInit {
   user$: Observable<User> = this.githubService.user$.pipe(tap(console.log))
 
   constructor(private githubService: GithubService) {}
-
-  ngOnInit(): void {}
 
   private sortRepos(): ((a: Repo, b: Repo) => number) | undefined {
     return (a, b) => {
